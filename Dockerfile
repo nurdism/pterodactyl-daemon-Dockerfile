@@ -6,7 +6,7 @@ WORKDIR /srv/daemon
 
 RUN apk update \
  && apk add openssl make gcc g++ python linux-headers paxctl gnupg zip unzip git \
- && git clone https://github.com/Pterodactyl/Daemon.git . \
+ && git clone https://github.com/nurdism/daemon.git . \
  && npm install --production \
  && apk del curl make gcc g++ python linux-headers paxctl gnupg tar ${DEL_PKGS} \
  && mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2 \
